@@ -16,7 +16,7 @@ PORTD|=(1<<PD0);// set bit
 PORTD|=(1<<PD1);//set bit
     while(1)
     {
-        if(!(PIND&(1<<PD0))||(!PIND&(1<<PD1)))// Switch press
+        if((!(PIND&(1<<PD0)))||(!PIND&(1<<PD1)))// Switch press
         {
          PORTB|=(1<<PB0);
          _delay_ms(20);
